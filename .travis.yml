@@ -1,0 +1,16 @@
+jobs:
+  include:
+    - language: csharp
+      dist: xenial
+      mono: none
+      dotnet: 2.2
+      install: 
+        - dotnet clean
+        - dotnet restore
+      script:
+        - dotnet build
+branches:
+  only:
+    - /.*/
+notifications:
+  email: false
